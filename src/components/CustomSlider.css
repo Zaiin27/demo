@@ -1,0 +1,148 @@
+
+/* Outer wrapper to center the slider and control width */
+.slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 85%; /* Container width */
+  margin: 0 auto;
+  overflow: visible; /* Allow arrows to be visible outside */
+  height: auto;
+}
+
+/* Header styling (Heading and View All button) */
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3px;
+}
+
+.slider-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.view-all-btn {
+  /* background-color: #007bff; */
+  color: blue;
+  text-decoration: underline;
+  border: none;
+  padding: 8px 16px;
+  /* border-radius: 4px; */
+  cursor: pointer;
+}
+
+.view-all-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Container for the slider */
+.slider-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%; /* Full width of the wrapper */
+  height: 100%; /* Match the outer height */
+}
+
+.slider {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  flex: 0 0 calc(50% / 6 - 5px); 
+  max-width: calc(50% / 6 - 5px);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  height: 90%; /* Match container height */
+}
+
+.job-image {
+  width: 50%; /* Smaller images */
+  height: auto;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.job-title {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 2px 0;
+}
+
+.job-category {
+  font-size: 0.7rem;
+}
+
+/* Arrow buttons outside the container */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: black;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10; /* Ensure arrows are above all content */
+}
+
+/* Left arrow */
+.arrow.left-arrow {
+  left: -50px; /* Position outside the container */
+}
+
+/* Right arrow */
+.arrow.right-arrow {
+  right: -50px; /* Position outside the container */
+}
+
+/* Hover effect */
+.arrow:hover {
+  background: #c6c8ca;
+  color: black;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .card {
+    flex: 0 0 calc(100% / 4 - 10px); /* Show 4 cards on smaller screens */
+    max-width: calc(100% / 4 - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 calc(100% / 2 - 10px); /* Show 2 cards on tablet screens */
+    max-width: calc(100% / 2 - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 0 0 calc(100% - 10px); /* Show 1 card on small screens */
+    max-width: calc(100% - 10px);
+  }
+}
+

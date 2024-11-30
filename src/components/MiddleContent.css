@@ -1,0 +1,96 @@
+.middle {
+  width: 100%;
+  height: 350px;
+  /* background-color: aliceblue; */
+  display: flex;
+  align-items: center;
+}
+
+.middle-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 320px;
+}
+
+.inner-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #eeecec;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+/* First Part - Left section with image and text */
+.first-part {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  /* background-color: #910101; */
+  padding: 10px;
+  /* color: white; */
+}
+
+.first-part img {
+  width: 100px; /* Adjust image size */
+  height: 100px;
+  margin-bottom: 10px; /* Space between image and text */
+  object-fit: cover; /* Ensure image scales properly */
+}
+
+.first-part h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.first-part p {
+  font-size: 0.9rem;
+  /* color: #ddd; */
+}
+
+/* Second and Third Parts */
+.second-and-third-item {
+  position: relative;
+  width: 30%; /* Fixed width for second and third parts */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.second-and-third-item img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 10px;
+}
+
+.second-and-third-item h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.second-and-third-item p {
+  font-size: 0.8rem;
+  color: #494848;
+}
+
+/* Second Part - Green Background */
+.second-and-third-item:nth-child(2) {
+  background-color: rgba(189, 252, 195, 0.895); /* Green */
+}
+
+/* Third Part - Blue Background */
+.second-and-third-item:nth-child(3) {
+  background-color: rgba(173, 216, 230, 0.895); /* Blue */
+}

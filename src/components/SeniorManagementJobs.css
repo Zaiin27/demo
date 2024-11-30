@@ -1,0 +1,104 @@
+/* Unique container styling */
+.senior-jobs-slider {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  overflow: hidden; /* Prevent overflow affecting other components */
+  padding: 20px 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.senior-jobs-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Unique slider wrapper */
+.senior-slider-wrapper {
+  position: relative;
+  overflow: hidden; /* Ensures only visible cards are shown */
+  width: 100%;
+}
+
+.senior-slider {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  /* width: 100px; */
+}
+
+/* Unique card styling */
+.senior-job-card {
+  flex: 0 0 calc(100% / 4); /* Fit 4 cards in one row */
+  margin: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.senior-job-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Unique image styling */
+.senior-job-image {
+  width: 130px;
+  height: 60px;
+  /* border-radius: 50%; */
+  object-fit: cover;
+  margin: 15px auto;
+  border: 2px solid #ddd;
+}
+
+/* Text styling */
+.senior-job-card .senior-job-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #444;
+}
+
+.senior-job-card .senior-job-company {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Unique arrow button styling */
+.senior-slider-arrows {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.senior-slider-arrow {
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.5rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.senior-slider-arrow:hover {
+  background-color: #0056b3;
+}
+
+.senior-slider-arrow:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.senior-job-card {
+  flex: 0 0 calc(100% / 7); /* Shrinks cards to fit 5 per row */
+  height: 170px; /* Adjust to preferred height */
+
+}
